@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{config('app.name')}}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        @include('includes.navbar')
+{{--         @include ('includes.pageheading')
+ --}}
+        <div class="container-fluid">
+            <div id="main-content" class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    @yield('content')
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                     @include('includes.sidebar')
+                </div> 
+            </div>
+
+        </div>
+        @include('includes.footer')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
