@@ -31,7 +31,7 @@
         <li class="divider"></li>
         <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
         <li class="divider"></li>
-        <li><a href="#"><i class="icon-key"></i> Log Out</a></li>
+        <li><a href="{{ route('admin.logout') }}"><i class="icon-key"></i> Logout</a></li>
       </ul>
     </li>
     <li class="dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
@@ -45,6 +45,9 @@
         <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
       </ul>
     </li>
+    
+    <li><a href="{{ route('index') }}"><i class="icon-check"></i>Laravel Hotel</a></li>
+    <li class="divider"></li>
     <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
     <li class=""><a title="" href="{{ route('admin.logout') }}"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
   </ul>
@@ -59,7 +62,7 @@
 <!--sidebar-menu-->
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
   <ul>
-    <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+    <li class="active"><a href="{{ route('admin.admin') }}"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
     <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
     <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
     <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>

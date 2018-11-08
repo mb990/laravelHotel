@@ -2,7 +2,8 @@
 <html lang="en">
     
 <head>
-        <title>Matrix Admin</title><meta charset="UTF-8" />
+
+        <title>Admin Panel</title><meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ asset ('css/backend_css/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ asset ('css/backend_css/bootstrap-responsive.min.css') }}" />
@@ -44,6 +45,7 @@
                     <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
                     <span class="pull-right"><input type="submit" value="Login" href="{{ route ('admin.admin') }}" class="btn btn-success" /></a></span>
                 </div>
+                    <a href="{{ route ('index') }}">Back to Hotel</a>
             </form>
             <form id="recoverform" action="#" class="form-vertical">
                 <p class="normal_text">Enter your e-mail address below and we will send you instructions how to recover a password.</p>

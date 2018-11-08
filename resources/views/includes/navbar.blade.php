@@ -17,6 +17,11 @@
       <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
         <a class="nav-link" href="/contact">Contact</a>
       </li>
+      @auth('admin')
+      <li class="nav-item {{ Request::is('users') ? 'active' : '' }}">
+        <a class="nav-link" href="/users">Users</a>
+      </li>
+      @endauth 
       {{-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -34,13 +39,24 @@
     </ul>
     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @auth
+                        @auth('admin')
+                          <li class="nav-item {{ Request::is('admin.admin') ? 'active' : '' }}">
+                            <a class="nav-link" href="/admin">Admin Panel</a>
+                        </li>
+                        @else
+                          <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin Login') }}</a>
+                            </li>
+                        
+
+                        @auth(!'user') 
 
                          <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
                             <a class="nav-link" href="/home">Your dashboard</a>
-                        
                         </li>
                         @endauth
+                        
+                        
                         
                         @guest
                             <li class="nav-item">
@@ -51,7 +67,9 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
                             </li>
-                        @else
+                        @endguest 
+                        @endauth
+                         @auth(!'user')
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   {{--  @if (!session()->has('admin'))
@@ -59,6 +77,7 @@
 {{--                                   @if (Auth::guard('admin'))
  --}}                                    {{-- {{ Auth::user()->name }}<span class="caret"></span> --}}
                                   {{-- @else  --}}
+                                  
                                   {{ Auth::user()->name }} <span class="caret"></span>
                                  {{--  @endif --}}
                                 </a>
@@ -73,8 +92,10 @@
                                         @csrf
                                     </form>
                                 </div>
+                                
                             </li>
-                        @endguest          
+                          
+                        @endauth
                         
       </ul>
 
