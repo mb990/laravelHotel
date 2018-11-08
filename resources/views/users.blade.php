@@ -2,7 +2,7 @@
 <?php $title = 'Users' ?>
 @include ('includes.pageheading')
 @section('content')
-<div class="container">
+
 <style>
     table {
         font-family: arial, sans-serif;
@@ -21,18 +21,23 @@
     }
 </style>
 
-            <table class="pagination">
+<div class="container text-center">
+    
+
+        <table class="pagination">
+            <tr>
+                <th class="text-center">User</th>
+                <th class="text-center">Email</th>
+            </tr>
+            @foreach ($users as $user)
                 <tr>
-                    <th class="text-center">User</th>
-                    <th class="text-center">Email</th>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
                 </tr>
-                @foreach ($users as $user)
-                    <tr>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                    </tr>
-                @endforeach
-            </table>
-        {{ $users->links() }}   
+            @endforeach
+        </table>
+    <div>
+        <p> {{ $users->links() }} </p>
+    </div>
 </div>
 @endsection
