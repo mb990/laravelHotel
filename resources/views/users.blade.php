@@ -29,13 +29,10 @@
     .links{
         margin:auto;
     }
-    h2{
-        margin-left: 300px;
-    }
 </style>
 
     <div class="container">
-        <h2>List of registered users</h2>
+        <h2 class="text-center">List of registered users</h2>
 
         <table class="table1">
             <tr>
