@@ -4,40 +4,54 @@
 @section('content')
 
 <style>
-    table {
+    .table1 {
         font-family: arial, sans-serif;
         border-collapse: collapse;
-        width: 100%;
+        width: auto;
+        margin: auto;
     }
-
-    td, th {
-        border: 1px solid #dddddd;
+     th {
+        border: 3px solid black;
         text-align: left;
         padding: 8px;
+        width:300px;
     }
-
-    tr:nth-child(even) {
+    .td1 {
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+        width:300px;
+    }
+    
+    tr:nth-child(even) {     /*  OVO NAPRAVI SVAKI DRUGI RED DA BUDE BELE BOJE  */
         background-color: #dddddd;
+    }
+    .links{
+        margin:auto;
+    }
+    h2{
+        margin-left: 300px;
     }
 </style>
 
-<div class="container text-center">
-    
+    <div class="container">
+        <h2>List of registered users</h2>
 
-        <table class="pagination">
+        <table class="table1">
             <tr>
                 <th class="text-center">User</th>
                 <th class="text-center">Email</th>
             </tr>
-            @foreach ($users as $user)
+            
+            @foreach($users as $user)    
                 <tr>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                </tr>
-            @endforeach
+                    <td class="td1">{{ $user->name }}</td>
+                    <td class="td1">{{ $user->email }}</td>
+                </tr> 
+            @endforeach                  
         </table>
-    <div>
-        <p> {{ $users->links() }} </p>
+        <table class="links">
+            <td> {{ $users->links() }} </td>
+        </table>
     </div>
-</div>
 @endsection
