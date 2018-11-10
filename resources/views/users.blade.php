@@ -9,6 +9,7 @@
         border-collapse: collapse;
         width: auto;
         margin: auto;
+
     }
      th {
         border: 3px solid black;
@@ -31,24 +32,28 @@
     }
 </style>
 
-    <div class="container">
-        <h2 class="text-center">List of registered users</h2>
+    <div class="container" style="overflow-x: auto;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-3">
+                <h2 class="text-center">List of registered users</h2>
 
-        <table class="table1">
-            <tr>
-                <th class="text-center">User</th>
-                <th class="text-center">Email</th>
-            </tr>
-            
-            @foreach($users as $user)    
-                <tr>
-                    <td class="td1">{{ $user->name }}</td>
-                    <td class="td1">{{ $user->email }}</td>
-                </tr> 
-            @endforeach                  
-        </table>
-        <table class="links">
-            <td> {{ $users->links() }} </td>
-        </table>
+                <table class="table1">
+                    <tr>
+                        <th class="text-center">User</th>
+                        <th class="text-center">Email</th>
+                    </tr>
+                    
+                    @foreach($users as $user)    
+                        <tr>
+                            <td class="td1">{{ $user->name }}</td>
+                            <td class="td1">{{ $user->email }}</td>
+                        </tr> 
+                    @endforeach                  
+                </table>
+                <table class="links">
+                    <td> {{ $users->links() }} </td>
+                </table>
+            </div>
+        </div> 
     </div>
 @endsection

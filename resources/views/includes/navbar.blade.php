@@ -39,22 +39,15 @@
     </ul>
     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @auth('admin')
-                          <li class="nav-item {{ Request::is('admin.admin') ? 'active' : '' }}">
-                            <a class="nav-link" href="/admin">Admin Panel</a>
-                        </li>
-                        @else
-                          <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin Login') }}</a>
-                            </li>
+            
                         
 
-                        @auth(!'user') 
+                        {{-- @auth(!'user') 
 
                          <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
                             <a class="nav-link" href="/home">Your dashboard</a>
                         </li>
-                        @endauth
+                        @endauth --}}
                         
                         
                         
@@ -68,7 +61,7 @@
                                 @endif
                             </li>
                         @endguest 
-                        @endauth
+                      
                          @auth(!'user')
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -105,19 +98,22 @@
     </form> -->
   </div>
 </nav>
-      @if (Request::is('/'))
-      <div class="container justify-content-center">
+        @if (Request::is('/'))
+            <div class="container justify-content-center">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
             <img class="mySlides slider_images" src="images/hotel_header.jpg">
             <img class="mySlides slider_images" src="images/hotel_header1.jpg">
             <img class="mySlides slider_images" src="images/hotel_header2.jpg">
             <img class="mySlides slider_images" src="images/hotel_header3.jpg">
+
             {{-- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> --}}
           </div>
         </div>  
       </div>
+
+      <script src="{{ asset('js/js-image-slider')}} "></script>
 
 <script>
 var myIndex = 0;
@@ -127,7 +123,7 @@ function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
+       x[i].style.display = "none"; 
     }
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    

@@ -41,14 +41,12 @@
 	padding-left: 100px;
 }
 .index_img2{
-	margin-top: 20px; 
+	margin: auto; 
 	height:300px; 
 	width: 500px;
 }
 .slider_images{
 	width: 600px; 
 	height: 180px;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	margin-left: 250px;
+	margin:auto;
 }

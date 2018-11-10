@@ -4,9 +4,16 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{'csrf_token'}}">
         <title>{{config('app.name')}}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+
+        @if (Request::is('/'))
+        <link rel="stylesheet" href="{{ asset ('css/js-image-slider') }}" media="all" type="text/css" />
+        <link rel="stylesheet" href="{{ asset ('css/generic') }}" media="all" type="text/css"/>
+        @endif
     </head>
     <body>
         @include('includes.navbar')

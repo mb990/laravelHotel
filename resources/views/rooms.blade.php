@@ -9,28 +9,28 @@
 		<h2 class="text-center">Available rooms</h2>
 	</div>
 	<div class="row">
-		<div class="float-left col-lg-4 col-md-4 col-sm-4">
+		<div class="float-left col-lg-4 col-md-12 col-sm-12">
 			<img class="room_item" src="https://s-media-cache-ak0.pinimg.com/originals/1e/97/24/1e9724023761181bcb976a1eec850832.jpg">
 			<p>Room Description</p>
 			<p>Number of rooms</p>
 			<p>Price</p>
 			<button>Book</button>
 		</div>
-		<div class=" float-left col-lg-4 col-md-4 col-sm-4" style="width:180px";>
+		<div class=" float-left col-lg-4 col-md-12 col-sm-12";>
 			<img class="room_item" src="https://s-media-cache-ak0.pinimg.com/originals/1e/97/24/1e9724023761181bcb976a1eec850832.jpg">
 			<p>Room Description</p>
 			<p>Number of rooms</p>
 			<p>Price</p>
 			<button>Book</button>
 		</div>
-		<div class=" float-left col-lg-4 col-md-4 col-sm-4" style="width:180px";>
+		<div class=" float-left col-lg-4 col-md-12 col-sm-12";>
 			<img class="room_item" src="https://s-media-cache-ak0.pinimg.com/originals/1e/97/24/1e9724023761181bcb976a1eec850832.jpg">
 			<p>Room Description</p>
 			<p>Number of rooms</p>
 			<p>Price</p>
 			<button>Book</button>
 		</div>
-		<div class=" float-left col-lg-4 col-md-4 col-sm-4" style="width:180px";>
+		<div class=" float-left col-lg-4 col-md-12 col-sm-12";>
 			<img class="room_item" src="https://s-media-cache-ak0.pinimg.com/originals/1e/97/24/1e9724023761181bcb976a1eec850832.jpg">
 			<p>Room Description</p>
 			<p>Number of rooms</p>
