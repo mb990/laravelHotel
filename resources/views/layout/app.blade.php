@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{'csrf_token'}}">
         <title>{{config('app.name')}}</title>
@@ -24,7 +25,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-8">
                     @yield('content')
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                      @include('includes.sidebar')
                 </div> 
             </div>

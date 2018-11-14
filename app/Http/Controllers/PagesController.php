@@ -30,4 +30,9 @@ class PagesController extends Controller
 
     	return view('news');
     }
+
+    public function dashboard(){
+
+        return view('home');
+    }
 }

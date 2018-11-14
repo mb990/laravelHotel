@@ -63,6 +63,10 @@
                         @endguest 
                       
                          @auth(!'user')
+                         @auth('admin')
+                        
+                            <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
+                              <a class="nav-link" href="/dashboard">Dashboard</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   {{--  @if (!session()->has('admin'))
@@ -87,7 +91,7 @@
                                 </div>
                                 
                             </li>
-                          
+                        @endauth 
                         @endauth
                         
       </ul>

@@ -17,6 +17,7 @@ Route::get("/about", "PagesController@about");
 Route::get("/contact", "PagesController@contact");
 Route::get("/news", "PagesController@news");
 Route::get("/users", "UsersController@index");
+Route::get("/dashboard", "PagesController@dashboard");
 Auth::routes();
 
 
