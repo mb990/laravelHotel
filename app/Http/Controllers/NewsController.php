@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Room;
+use App\News;
 
-class RoomsController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,8 @@ class RoomsController extends Controller
      */
     public function index()
     {
-        return view('rooms');
+        // $news = News::with('News')->get();
+        // return view('news')->with('news', $news);
     }
 
     /**
@@ -25,7 +25,8 @@ class RoomsController extends Controller
      */
     public function create()
     {
-        $room = new Room ();
+        return view('admin.components.add_news');
+
     }
 
     /**
@@ -58,7 +59,7 @@ class RoomsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.components.edit_news');
     }
 
     /**

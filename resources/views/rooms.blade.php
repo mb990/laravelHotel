@@ -6,7 +6,7 @@
 
 <div class="container">
 	<div class="col-lg-12 col-md-12 col-sm-12">
-		<h2 class="text-center">Available rooms</h2>
+		<h2 class="text-center">Rooms</h2>
 	</div>
 	<div class="row">
 		<div class="float-left col-lg-4 col-md-12 col-sm-12">

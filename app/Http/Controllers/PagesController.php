@@ -11,10 +11,6 @@ class PagesController extends Controller
     	return view('index');
     }
 
-    public function rooms(){
-
-    	return view('rooms');
-    }
 
     public function about(){
 

@@ -27,13 +27,13 @@
 <div id="content">
 <!--breadcrumbs-->
   <div id="content-header">
-    <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+    <div id="breadcrumb"> <a href="{{ route ('admin.admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
   </div>
 <!--End-breadcrumbs-->
 
 <!--Action boxes-->
   <div class="container-fluid">
-    <div class="quick-actions_homepage">
+    {{-- <div class="quick-actions_homepage">
       <ul class="quick-actions">
         <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span class="label label-important">20</span> My Dashboard </a> </li>
         <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
@@ -47,11 +47,11 @@
         <li class="bg_lr"> <a href="error404.html"> <i class="icon-info-sign"></i> Error</a> </li>
 
       </ul>
-    </div>
+    </div> --}}
 <!--End-Action boxes-->    
 
 <!--Chart-box-->    
-    <div class="row-fluid">
+    {{-- <div class="row-fluid">
       <div class="widget-box">
         <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
           <h5>Site Analytics</h5>
@@ -60,8 +60,8 @@
           <div class="row-fluid">
             <div class="span9">
               <div class="chart"></div>
-            </div>
-            <div class="span3">
+            </div> --}}
+            {{-- <div class="span3">
               <ul class="site-stats">
                 <li class="bg_lh"><i class="icon-user"></i> <strong>2540</strong> <small>Total Users</small></li>
                 <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>New Users </small></li>
@@ -70,13 +70,13 @@
                 <li class="bg_lh"><i class="icon-repeat"></i> <strong>10</strong> <small>Pending Orders</small></li>
                 <li class="bg_lh"><i class="icon-globe"></i> <strong>8540</strong> <small>Online Orders</small></li>
               </ul>
-            </div>
-          </div>
+            </div> --}}
+         {{--  </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 <!--End-Chart-box--> 
-    <hr/>
+{{--     <hr/>
     <div class="row-fluid">
       <div class="span6">
         <div class="widget-box">
@@ -316,7 +316,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
   </div>
 </div>
 

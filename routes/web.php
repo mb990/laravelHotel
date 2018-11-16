@@ -12,7 +12,7 @@
 */
 
 Route::get("/", "PagesController@index")->name('index');
-Route::get("/rooms", "PagesController@rooms");
+Route::get("/rooms", "RoomsController@index");
 Route::get("/about", "PagesController@about");
 Route::get("/contact", "PagesController@contact");
 Route::get("/news", "PagesController@news");
@@ -32,3 +32,7 @@ Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('adm
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 Route::get('/admin', 'AdminController@index')->name('admin.admin');
 Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+
+Route::get('admin/add-news', 'NewsController@create')->name('admin.add-news');
+// Route::get('admin/delete-news', 'NewsController@destroy')->name('admin.delete-news');
+// Route::get('admin/edit-news', 'NewsController@edit')->name('admin.edit-news');
