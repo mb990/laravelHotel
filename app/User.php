@@ -31,8 +31,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function isAdmin()
-    {
-        return $this->type === self::ADMIN_TYPE;
+    public function rooms(){
+        return $this->hasMany('App\Rooms');
     }
 }

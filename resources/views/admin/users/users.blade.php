@@ -1,8 +1,5 @@
-@extends('layout.app')
-<?php $title = 'Users' ?>
-@include ('includes.pageheading')
+@extends ('admin.admin')
 @section('content')
-
 <style>
     .table1 {
         font-family: arial, sans-serif;
@@ -32,7 +29,7 @@
     }
 </style>
 
-    <div class="container" style="overflow-x: auto; width: auto;">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <h2 class="text-center">List of registered users</h2>
@@ -41,25 +38,14 @@
                     <tr>
                     </tr>
                     
-                    @foreach($users as $user)    
+                    @foreach($users as $user)
                         <tr>
-                            <td class="text-center">User</th>
+                            <th class="text-center"><a href="/user/{{ $user->id }}">{{ $user->name }}</a></th>
                         </tr>
-                        <tr>
-                            <th class="text-center">{{ $user->name }}</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">Email</th>
-                        </tr>
-                        <tr>
-                            <th class="text-center">{{ $user->email }}</td>
-                        </tr> 
                     @endforeach                  
                 </table>
-                <table class="links">
-                    <td> {{ $users->links() }} </td>
-                </table>
             </div>
-        </div> 
+        </div>   
+           <div class="lead pagination" style="padding-left: auto;"> {{ $users->links() }} </div>
     </div>
 @endsection

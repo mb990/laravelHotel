@@ -22,6 +22,14 @@ $factory->define(App\User::class, function (Faker $faker) {
         // 'type' => User::DEFAULT_TYPE,
     ];
 });
+
+$factory->define(App\News::class, function (Faker $faker) {
+    return [
+        'title' => $faker->sentence,
+        'content' => $faker->text,
+        'datetime' => $faker->datetime,
+    ];
+});
 // $factory->state(App\User::class, 'admin', [
 //     'type' => User::ADMIN_TYPE,
 // ]);

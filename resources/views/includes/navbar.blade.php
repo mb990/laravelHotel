@@ -17,11 +17,6 @@
       <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
         <a class="nav-link" href="/contact">Contact</a>
       </li>
-      @auth('admin')
-      <li class="nav-item {{ Request::is('users') ? 'active' : '' }}">
-        <a class="nav-link" href="/users">Users</a>
-      </li>
-      @endauth 
       {{-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -63,7 +58,6 @@
                         @endguest 
                       
                          @auth(!'user')
-                         @auth('admin')
                         
                             <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
                               <a class="nav-link" href="/dashboard">Dashboard</a>
@@ -91,7 +85,6 @@
                                 </div>
                                 
                             </li>
-                        @endauth 
                         @endauth
                         
       </ul>
@@ -132,7 +125,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 8000); // Change image every 8 seconds
+    setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 </script>
 

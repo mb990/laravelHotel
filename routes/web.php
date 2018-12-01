@@ -12,11 +12,11 @@
 */
 
 Route::get("/", "PagesController@index")->name('index');
-Route::get("/rooms", "RoomsController@index");
+Route::get("/rooms", "PagesController@rooms");
 Route::get("/about", "PagesController@about");
 Route::get("/contact", "PagesController@contact");
 Route::get("/news", "PagesController@news");
-Route::get("/users", "UsersController@index");
+Route::get("/news/{id}", "PagesController@view_news");
 Route::get("/dashboard", "PagesController@dashboard");
 Auth::routes();
 
@@ -33,6 +33,15 @@ Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.logi
 Route::get('/admin', 'AdminController@index')->name('admin.admin');
 Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 
-Route::get('admin/add-news', 'NewsController@create')->name('admin.add-news');
-// Route::get('admin/delete-news', 'NewsController@destroy')->name('admin.delete-news');
-// Route::get('admin/edit-news', 'NewsController@edit')->name('admin.edit-news');
+Route::get('/admin/news', 'AdminNewsController@index')->name('admin.news');
+Route::get('admin/view-news/{id}', 'AdminNewsController@show');
+Route::get('admin/add-news', 'AdminNewsController@create')->name('admin.add-news');
+Route::post('admin/add-news/submit', 'AdminNewsController@store')->name('admin.create-news');
+Route::get('admin/edit-news/{id}', 'AdminNewsController@edit');
+// Route::post('admin/edit-news/submit', 'AdminNewsController@update');
+Route::put('admin/edit-news/submit/{id}', 'AdminNewsController@update');
+// Route::put('admin/edit-news/submit',array('as'=>'admin.edit-news','uses'=>'AdminNewsController@update'));
+Route::delete('admin/edit-news/{id}', 'AdminNewsController@destroy');
+
+Route::get("/admin/users", "UsersController@index")->name('users');
+Route::get('/user/{id}', 'UsersController@show');
