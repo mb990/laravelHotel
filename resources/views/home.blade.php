@@ -17,7 +17,7 @@
                         </div>
                     @endif
                     
-                    <p class="lead">Your rooms:
+                    <p class="lead" style="color:black">Your rooms:
 
                     You currently dont have a room. Why dont you <a href="/rooms">choose</a> one? <p>
                 </div>

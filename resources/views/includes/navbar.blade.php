@@ -95,7 +95,7 @@
     </form> -->
   </div>
 </nav>
-        @if (Request::is('/'))
+        {{-- @if (Request::is('/'))
             <div class="container justify-content-center">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
@@ -104,8 +104,8 @@
             <img class="mySlides slider_images" src="images/hotel_header2.jpg">
             <img class="mySlides slider_images" src="images/hotel_header3.jpg">
 
-            {{-- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> --}}
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
           </div>
         </div>  
       </div>
@@ -129,4 +129,4 @@ function carousel() {
 }
 </script>
 
-      @endif
+      @endif   UGASEN SLIDER  --}}  

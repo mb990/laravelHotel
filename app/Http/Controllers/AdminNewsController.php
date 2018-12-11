@@ -115,4 +115,9 @@ class AdminNewsController extends Controller
 
         return redirect('/admin/news')->with('success', 'News is deleted.');
     }
+
+    public function sortBy(){
+       $sortBy = News::latest()->get();
+        return view('news.news')->with('title', $sortBy);
+    }
 }

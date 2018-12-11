@@ -9,8 +9,8 @@ use App\Room;
 class PagesController extends Controller
 {
     public function index(){
-
-    	return view('index');
+        $pageTitle = "Index";
+    	return view('index')->with('pageTitle', $pageTitle);
     }
 
     public function news(){
@@ -46,6 +46,16 @@ class PagesController extends Controller
     }
 
     public function sidebar () {
-        
+        $news = News::latest()->get();
+        return view('news.news')->with('news', $news);
+
+        // $latest = News::orderBy('created_at', 'desc');
+        // return view('includes.sidebar')->with('latest', $latest);
+
     }
+
+    // public function sortBy(){
+    //     $sortBy = News::orderBy('title', 'desc')->paginate(10);
+    //     return view('news.news')->with('title', $sortBy);
+    // }
 }

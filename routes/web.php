@@ -16,12 +16,13 @@ Route::get("/rooms", "PagesController@rooms");
 Route::get("/about", "PagesController@about");
 Route::get("/contact", "PagesController@contact");
 Route::get("/news", "PagesController@news");
+// Route::get("/news", "PagesController@sidebar");
 Route::get("/news/{id}", "PagesController@view_news");
 Route::get("/dashboard", "PagesController@dashboard");
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');  NE TREBA MI JER RADI ISTO STO I DASHBOARD
 
 // Route::prefix('admin')->group(function() {
 //     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
