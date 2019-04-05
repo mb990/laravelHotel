@@ -20,6 +20,12 @@ class AdminNewsController extends Controller
         return view('admin.news.news')->with('news', $news);
     }
 
+    public function Latest()
+    {
+        $news = News::orderBy('datetime', 'asc')->paginate(5);
+        return view('news.news/latest')->with('news', $news);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -116,8 +122,4 @@ class AdminNewsController extends Controller
         return redirect('/admin/news')->with('success', 'News is deleted.');
     }
 
-    public function sortBy(){
-       $sortBy = News::latest()->get();
-        return view('news.news')->with('title', $sortBy);
-    }
 }
