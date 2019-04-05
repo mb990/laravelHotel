@@ -46,3 +46,6 @@ Route::delete('admin/edit-news/{id}', 'AdminNewsController@destroy');
 
 Route::get("/admin/users", "UsersController@index")->name('users');
 Route::get('/user/{id}', 'UsersController@show');
+
+Route::get('/admin/news/search', 'SearchController@search_news');
+Route::get('/admin/users/search', 'SearchController@search_users');

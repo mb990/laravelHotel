@@ -2,7 +2,7 @@
 @section ('content')
 	<br>
 	<a class="btn btn-default center-block" href="/admin/news">Back</a><br><br>
-			<a class="btn btn-info center-block">Latest</a><br><br>
+			{{-- <a class="btn btn-info center-block">Latest</a><br><br> --}}
 		{!! Form::open(['action' => ['AdminNewsController@destroy', $news->id], 'method' => 'POST']) !!}
 	        {{ Form::hidden('_method', 'DELETE') }}
 	        {{ Form::bsSubmit('Delete', ['class' => 'btn btn-xs btn-danger']) }}

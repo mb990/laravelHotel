@@ -22,7 +22,7 @@ class AdminNewsController extends Controller
 
     public function Latest()
     {
-        $news = News::orderBy('datetime', 'asc')->paginate(5);
+        $news = News::orderBy('datetime', 'desc')->paginate(5);
         return view('news.news/latest')->with('news', $news);
     }
 

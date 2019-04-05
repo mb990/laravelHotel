@@ -38,7 +38,14 @@
 <!--close-top-Header-menu-->
 <!--start-top-serch-->
 <div id="search">
-  <input type="text" placeholder="Search here..."/>
-  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+  <form action="/admin/news/search" method="GET">
+      <input type="text" name ="news" placeholder="Search News"/>
+      <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+  </form>
+  <form action="/admin/users/search" method="GET">
+    <input type="text" name ="news" placeholder="Search Users"/>
+    <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+</form>
+  
 </div>
 <!--close-top-serch-->

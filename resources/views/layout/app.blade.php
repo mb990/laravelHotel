@@ -27,7 +27,12 @@
                     @yield('content')
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
+                    @if (Request::is('login'))
                      @include('includes.sidebar')
+                    @endif
+                    @if (!Request::is('register'))
+                    @include('includes.sidebar')
+                   @endif
                 </div> 
             </div>
 
