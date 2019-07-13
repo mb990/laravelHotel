@@ -11,6 +11,7 @@
 |
 */
 
+// Pages
 Route::get("/", "PagesController@index")->name('index');
 Route::get("/rooms", "PagesController@rooms");
 Route::get("/about", "PagesController@about");
@@ -29,11 +30,13 @@ Auth::routes();
 //     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 //     });
 
+// Login
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 Route::get('/admin', 'AdminController@index')->name('admin.admin');
 Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 
+// News
 Route::get('/admin/news', 'AdminNewsController@index')->name('admin.news');
 Route::get('admin/view-news/{id}', 'AdminNewsController@show');
 Route::get('admin/add-news', 'AdminNewsController@create')->name('admin.add-news');
@@ -44,8 +47,14 @@ Route::put('admin/edit-news/submit/{id}', 'AdminNewsController@update');
 // Route::put('admin/edit-news/submit',array('as'=>'admin.edit-news','uses'=>'AdminNewsController@update'));
 Route::delete('admin/edit-news/{id}', 'AdminNewsController@destroy');
 
+// Users
 Route::get("/admin/users", "UsersController@index")->name('users');
 Route::get('/user/{id}', 'UsersController@show');
 
-Route::get('/admin/news/search', 'SearchController@search_news');
-Route::get('/admin/users/search', 'SearchController@search_users');
+// Search
+Route::get('/all-news/search', 'SearchController@search_news');
+Route::get('/admin/news/search', 'SearchController@admin_search_news');
+Route::get('/admin/users/search', 'SearchController@admin_search_users');
+
+// Contact
+Route::post('contact/send', 'EmailController@send');

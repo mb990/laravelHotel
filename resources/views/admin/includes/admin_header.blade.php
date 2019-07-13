@@ -36,7 +36,7 @@
   </ul>
 </div>
 <!--close-top-Header-menu-->
-<!--start-top-serch-->
+<!--start-top-search-->
 <div id="search">
   <form action="/admin/news/search" method="GET">
       <input type="text" name ="news" placeholder="Search News"/>

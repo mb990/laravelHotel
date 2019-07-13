@@ -17,7 +17,7 @@ class SearchController extends Controller
         $search = $request->get('news');
         $news = DB::table('news')->where('title', 'like', '%' . $search . '%')->paginate(5);
         return view ('admin.news.news')->with('news', $news);
-   } 
+   }
 
     public function admin_search_users (Request $request){
         $search = $request->get('users');
